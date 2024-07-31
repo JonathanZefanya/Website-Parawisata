@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+	<link href="scroll-persen.css" rel="stylesheet">
+
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="scroll-persen.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="js/load-metro.js"></script>
+	<script src="js/docs.js"></script>
+    
+    <style>
+	</style>
+	
+<title>Selamat Datang di WISATHAN</title>
+
+</head>
+
+<body class="metro"><div id="scroll"></div>
+	<header class="bg-darkCobalt" data-load="atasan.php"></header>
+    
+    <div class="" data-load="sampul.html"></div>
+	<br />
+	<div class="ui text container center aligned">
+    <h1 class="ui header"></h1>
+</div>
+    <div class="container" data-load="beranda.php"></div>
+    <div class="">
+						<center><div id="googleMap" data-role="googleMap"></div></center> <br />
+						<style>
+						   #googleMap {
+							height: 400px;
+							width: 100%;
+						   }
+						</style>
+</div>
+<script>
+      function initMap() { 
+        var iti = {lat: -6.343179, lng: 106.675696};
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 15,
+          center: iti
+        });
+        var marker = new google.maps.Marker({
+          position: iti,
+          map: map
+        });
+      }
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrUIokfRmfo0uia86H1NTfV9UfqQFKpTI&callback=initMap"></script>
+    <footer class="dark" data-load="bawahan.html"></footer>
+</body>
+</html>
