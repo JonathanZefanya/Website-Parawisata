@@ -7,16 +7,18 @@ if(isset($_SESSION['user_admin'])){
 	$username	=$_SESSION['user_admin'];
 	$level		=$_SESSION['level'];
 	
-	$judul=ucwords(strtolower($_POST['judul']));
+	// $judul=ucwords(strtolower($_POST['judul']));
 	if(isset($_POST['Tambah']))
 	{
+	    $judul=ucwords(strtolower($_POST['judul']));
 		mysqli_query($kon,"INSERT INTO setup_sumbar (kat_sumbar, judul_sumbar, konten_sumbar)
 				value ('sejarah', '$judul', '$_POST[konten]')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit']))
 	{
+	    $judul=ucwords(strtolower($_POST['judul']));
 		mysqli_query($kon,"UPDATE setup_sumbar SET kat_sumbar='sejarah', judul_sumbar='$judul', konten_sumbar='$_POST[konten]' WHERE id_sumbar= '$_POST[id]'");
 	
 	}
@@ -64,10 +66,10 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row col-lg-10">
                         	<form name="setupSumbarSejarah" action="setupSumbarSejarah.php" method="post" enctype="multipart/form-data">
 							<?php
-								if (isset($_GET['id']))
-								{
-								$comot_id=mysqli_query($kon,"select * from setup_sumbar where id_sumbar=".$_GET['id']);   
-								$ngisi=mysqli_fetch_row($comot_id);
+                                $ngisi = array("", "", "", ""); // Initialize $ngisi with default values
+								if (isset($_GET['id'])){
+                                    $comot_id=mysqli_query($kon,"select * from setup_sumbar where id_sumbar=".$_GET['id']);   
+                                    $ngisi=mysqli_fetch_row($comot_id);
 								}					 
 							?>
                                 <fieldset>

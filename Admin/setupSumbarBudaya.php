@@ -7,23 +7,25 @@ if(isset($_SESSION['user_admin'])){
 	$username	=$_SESSION['user_admin'];
 	$level		=$_SESSION['level'];
 	
-	$judul=ucwords(strtolower($_POST['judul']));
+	// $judul=ucwords(strtolower($_POST['judul']));
 	if(isset($_POST['Tambah']))
 	{
-		mysqli_query($kon,"INSERT INTO setup_Jatim (kat_Jatim, judul_Jatim, konten_Jatim)
+	    $judul=ucwords(strtolower($_POST['judul']));
+		mysqli_query($kon,"INSERT INTO setup_sumbar (kat_sumbar, judul_sumbar, konten_sumbar)
 				value ('budaya', '$judul', '$_POST[konten]')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit']))
 	{
-		mysqli_query($kon,"UPDATE setup_Jatim SET kat_Jatim='budaya', judul_Jatim='$judul', konten_Jatim='$_POST[konten]' WHERE id_Jatim= '$_POST[id]'");
+    	$judul=ucwords(strtolower($_POST['judul']));
+		mysqli_query($kon,"UPDATE setup_sumbar SET kat_sumbar='budaya', judul_sumbar='$judul', konten_sumbar='$_POST[konten]' WHERE id_sumbar= '$_POST[id]'");
 	
 	}
 	
 	else if(isset($_POST['Delete']))
 	{
-		mysqli_query($kon,"DELETE FROM setup_Jatim WHERE id_Jatim = '$_POST[id]'");
+		mysqli_query($kon,"DELETE FROM setup_sumbar WHERE id_sumbar = '$_POST[id]'");
 	
 	}
 ?>
@@ -62,11 +64,12 @@ if(isset($_SESSION['user_admin'])){
                     <div class="panel-heading"><h3>Setup Seni dan Budaya Jatim</h3></div>
                     <div class="panel-body">
                         <div class="row col-lg-10">
-                        	<form name="setupJatimBudaya" action="setupJatimBudaya.php" method="post" enctype="multipart/form-data">
+                        	<form name="setupJatimBudaya" action="setupSumbarBudaya.php" method="post" enctype="multipart/form-data">
 							<?php
+                            $ngisi = array("","","","");
 								if (isset($_GET['id']))
 								{
-								$comot_id=mysqli_query($kon,"select * from setup_Jatim where id_Jatim=".$_GET['id']);   
+								$comot_id=mysqli_query($kon,"select * from setup_sumbar where id_sumbar=".$_GET['id']);   
 								$ngisi=mysqli_fetch_row($comot_id);
 								}					 
 							?>
@@ -124,7 +127,7 @@ if(isset($_SESSION['user_admin'])){
                                 <tbody>
                                 <?php
 									$no=1;
-									$comot=mysqli_query($kon,"select * from setup_Jatim where kat_Jatim='budaya' order by id_Jatim");
+									$comot=mysqli_query($kon,"select * from setup_sumbar where kat_sumbar='budaya' order by id_sumbar");
 									while($isi_tbl=mysqli_fetch_row($comot))
 									{
 								?>
@@ -134,7 +137,7 @@ if(isset($_SESSION['user_admin'])){
                                         <td><?php $x=substr($isi_tbl[3], 0, 150); echo"$x...";?></td>
                                         <td>
                                         <div class="tooltip-demo">
-                                            <a href="setupJatimBudaya.php?id=<?php echo $isi_tbl[0]; ?>"><button type="button" class="btn btn-primary btn-xs"data-toggle="tooltip" data-placement="top" title="Edit/Hapus Content Budaya"><i class="fa fa-wrench"></i></button></a>
+                                            <a href="setupSumbarBudaya.php?id=<?php echo $isi_tbl[0]; ?>"><button type="button" class="btn btn-primary btn-xs"data-toggle="tooltip" data-placement="top" title="Edit/Hapus Content Budaya"><i class="fa fa-wrench"></i></button></a>
                                    		</div>
                                         </td>
                                     </tr>
