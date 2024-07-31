@@ -7,16 +7,18 @@ if(isset($_SESSION['user_admin'])){
 	$username	=$_SESSION['user_admin'];
 	$level		=$_SESSION['level'];
 	
-	$kat=ucwords(strtolower($_POST['kategori']));
+	// $kat=ucwords(strtolower($_POST['kategori']));
 	
 	if(isset($_POST['Tambah']))
 	{
+	    $kat=ucwords(strtolower($_POST['kategori']));
 		mysqli_query($kon,"INSERT INTO tbl_kategori (kategori, keterangan)
-				value ('$kat','$_POST[keterangan]')") or die(mysqli_error());
+				value ('$kat','$_POST[keterangan]')") or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit']))
-	{
+	{	
+        $kat=ucwords(strtolower($_POST['kategori']));
 		mysqli_query($kon,"UPDATE tbl_kategori SET kategori = '$kat', keterangan = '$_POST[keterangan]' WHERE id_kategori = '$_POST[id]'");
 	
 	}
@@ -64,6 +66,7 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row col-lg-6">
                         	<form name="setupKategori" action="setupKategori.php" method="post" enctype="multipart/form-data">
 							<?php
+                                $ngisi = array(0, '', '');
                                 if (isset($_GET['id']))
                                 {
                                 $comot_id=mysqli_query($kon,"select * from tbl_kategori where id_kategori=".$_GET['id']);   

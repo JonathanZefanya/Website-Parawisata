@@ -11,7 +11,7 @@ if(isset($_SESSION['user_admin'])){
 	{
 		mysqli_query($kon,"INSERT INTO tbl_paket (id_kategori, nama_paket, harga_paket, ket_paket)
 				value ('$_POST[id_kategori]','$_POST[nama_paket]','$_POST[harga_paket]','$_POST[ket_paket]')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit']))
@@ -63,6 +63,7 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row col-lg-6">
                         	<form name="setupPaket" action="setupPaket.php" method="post" enctype="multipart/form-data">
 							<?php
+                                $ngisi = array('id_kategori' => '', 'nama_paket' => '', 'harga_paket' => '', 'ket_paket' => '');
                                 if (isset($_GET['id']))
                                 {
                                 $comot_id=mysqli_query($kon,"select * from tbl_paket where id_paket=".$_GET['id']);   

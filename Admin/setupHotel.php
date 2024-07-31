@@ -1,16 +1,17 @@
-<?php session_start();
+<?php 
+session_start();
 
-if(isset($_SESSION['user_admin'])){
+if(isset($_SESSION['user_admin'])) {
 
 	//koneksi terpusat
 	include "../config/koneksi.php";
-	$username	=$_SESSION['user_admin'];
-	$level		=$_SESSION['level'];
+	$username = $_SESSION['user_admin'];
+	$level = $_SESSION['level'];
 	
 	if(isset($_POST['Tambah'])){
 		mysqli_query($kon,"INSERT INTO tbl_hotel (kd_daerah, hotel, bintang, harga, ket_hotel)
 				value ('$_POST[kd_daerah]','$_POST[hotel]','$_POST[bintang]','$_POST[harga]','$_POST[ket_hotel]')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit'])){
@@ -60,35 +61,38 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row">
                         	<form name="setupPenginapan" action="setupHotel.php" method="post" enctype="multipart/form-data">
 							<?php
-                                if (isset($_GET['id']))
-                                {
-                                $comot_id=mysqli_query($kon,"select * from tbl_hotel where id_hotel=".$_GET['id']);   
-                                $ngisi=mysqli_fetch_array($comot_id);
+                                if (isset($_GET['id'])) {
+                                    $comot_id = mysqli_query($kon, "SELECT * FROM tbl_hotel WHERE id_hotel = " . $_GET['id']);
+                                    if (mysqli_num_rows($comot_id) > 0) {
+                                        $ngisi = mysqli_fetch_array($comot_id);
+                                    } else {
+                                        $ngisi = ['id_hotel' => '', 'kd_daerah' => '', 'hotel' => '', 'bintang' => '', 'harga' => '', 'ket_hotel' => ''];
+                                    }
+                                } else {
+                                    $ngisi = ['id_hotel' => '', 'kd_daerah' => '', 'hotel' => '', 'bintang' => '', 'harga' => '', 'ket_hotel' => ''];
                                 }
-                                                     
                             ?>
                                 <fieldset>
                                 <div class="col-lg-4">
-									<input name="id" type="hidden" value="<?php echo $ngisi[0]; ?>">
+									<input name="id" type="hidden" value="<?php echo $ngisi['id_hotel']; ?>">
                                 	<div class="form-group">
                                     	<label>Pilih Daerah</label>
                             			<select class="form-control" name="kd_daerah">
                                         	<?php 
 												$comot_kat = mysqli_query($kon,"SELECT * FROM tbl_daerah");
-												while ($ngisi_kat = mysqli_fetch_assoc ($comot_kat)){
+												while ($ngisi_kat = mysqli_fetch_assoc($comot_kat)){
 													if($ngisi_kat['kode'] == $ngisi['kd_daerah']){
 														echo "<option value='$ngisi_kat[kode]' selected>$ngisi_kat[daerah]</option>";
 													}else{
 														echo "<option value='$ngisi_kat[kode]'>$ngisi_kat[daerah]</option>";						
 													}
-													
 												}
 											?>
                                         </select>
 									</div>
                                 	<div class="form-group">
                                     	<label>Nama Penginapan</label>
-                            			<input class="form-control" name="hotel" type="text" placeholder="ex: Nama Penginapan (Kelas Kamar) 1H" value="<?php echo $ngisi[2]; ?>">
+                            			<input class="form-control" name="hotel" type="text" placeholder="ex: Nama Penginapan (Kelas Kamar) 1H" value="<?php echo $ngisi['hotel']; ?>">
                                 	</div>
 								</div>
                                 <div class="col-lg-4">
@@ -114,7 +118,7 @@ if(isset($_SESSION['user_admin'])){
                                                     $salue="*****";
                                                 }
                                                 
-                                                if($ngisi[3]==$value){
+                                                if($ngisi['bintang'] == $value){
                                                     $sel= "selected";
                                                 }else{
                                                     $sel= "";
@@ -127,7 +131,7 @@ if(isset($_SESSION['user_admin'])){
                                     	<label>Harga Sewa Penginapan</label>
                                     <div class="form-group input-group">
                                         <span class="input-group-addon">Rp</span>
-                            			<input class="form-control" name="harga" type="text" value="<?php echo $ngisi[4]; ?>">
+                            			<input class="form-control" name="harga" type="text" value="<?php echo $ngisi['harga']; ?>">
                                         <span class="input-group-addon">,00</span>
                                 	</div>
 								</div>
@@ -135,7 +139,7 @@ if(isset($_SESSION['user_admin'])){
                                 <div class="col-lg-8">
                                     <div class="form-group">
                                     	<label>Description</label>
-                            			<textarea class="form-control" name="ket_hotel"><?php echo $ngisi[5]; ?></textarea>
+                            			<textarea class="form-control" name="ket_hotel"><?php echo $ngisi['ket_hotel']; ?></textarea>
                                   	</div>
                                     <?php
                                         if (isset($_GET['id'])){

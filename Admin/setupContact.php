@@ -11,7 +11,7 @@ if(isset($_SESSION['user_admin'])){
 	{
 		mysqli_query($kon,"INSERT INTO contact (alamat, kota, no_hp, no_tlp, email, content)
 				value ('$_POST[alamat]','$_POST[kota]','$_POST[no_hp]','$_POST[no_tlp]','$_POST[email]','$_POST[content]')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit']))
@@ -31,7 +31,7 @@ if(isset($_SESSION['user_admin'])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setup Beranda</title>
+    <title>Setup Contact</title>
     <!-- Core CSS - Include with every page -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -57,10 +57,11 @@ if(isset($_SESSION['user_admin'])){
             <div class="row col-lg-12">
                 
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h3>Setup Beranda</h3></div>
+                    <div class="panel-heading"><h3>Setup Contact</h3></div>
                     <div class="panel-body">
                         <form name="setupContact" action="setupContact.php" method="post" enctype="multipart/form-data">
                         <?php
+                            $ngisi = array_fill(0, 7, ''); // Initialize $ngisi with empty values
                             if (isset($_GET['id']))
                             {
                             $comot_id=mysqli_query($kon,"select * from contact where id=".$_GET['id']);   

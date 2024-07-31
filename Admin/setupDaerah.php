@@ -10,7 +10,7 @@ if(isset($_SESSION['user_admin'])){
 	if(isset($_POST['Tambah']))
 	{
 		mysqli_query($kon,"INSERT INTO tbl_daerah (kode, daerah)
-				value ('$_POST[kode]','$_POST[daerah]')") or die(mysqli_error());
+				value ('$_POST[kode]','$_POST[daerah]')") or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit']))
@@ -60,6 +60,7 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row col-lg-6">
                         	<form name="setupDaerah" action="setupDaerah.php" method="post" enctype="multipart/form-data">
 							<?php
+                                $ngisi = array('id_daerah' => '', 'kode' => '', 'daerah' => '');
                                 if (isset($_GET['id']))
                                 {
                                 $comot_id=mysqli_query($kon,"select * from tbl_daerah where id_daerah=".$_GET['id']);   
