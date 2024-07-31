@@ -49,14 +49,27 @@ if(isset($_SESSION['user_admin'])){
                     <div class="panel-body">   
                         <form name="cekTransaksi" action="cekTransaksi.php" method="post" enctype="multipart/form-data">
                         <?php
-                            if (isset($_GET['id']))
-                            {
-                            $comot_id=mysqli_query($kon,"SELECT * FROM tbl_pesan WHERE id_pesan=".$_GET['id']);   
-                            $ngisi=mysqli_fetch_array($comot_id);
-                            if ($ngisi==null){
-                                echo "NULL";
-                            }              
-                            }         
+                            if (isset($_GET['id'])) {
+                                $comot_id = mysqli_query($kon, "SELECT * FROM tbl_pesan WHERE id_pesan=" . $_GET['id']);
+                                if ($comot_id && mysqli_num_rows($comot_id) > 0) {
+                                    $ngisi = mysqli_fetch_array($comot_id);
+                                } else {
+                                    echo "Data tidak ditemukan.";
+                                    $ngisi = array(
+                                        'id_pesan' => '',
+                                        'status' => '',
+                                        'tgl_tour' => '',
+                                        'tgl_pesan' => ''
+                                    );
+                                }
+                            } else {
+                                $ngisi = array(
+                                    'id_pesan' => '',
+                                    'status' => '',
+                                    'tgl_tour' => '',
+                                    'tgl_pesan' => ''
+                                );
+                            }   
                         ?>
                         <fieldset>
                         	<div class="row">

@@ -7,14 +7,18 @@ if(isset($_SESSION['user_admin'])){
 	$username	=$_SESSION['user_admin'];
 	$level		=$_SESSION['level'];
 	
-	$judul=ucwords(strtolower($_POST['nama']));
+	// $judul=ucwords(strtolower($_POST['nama']));
 	
 	if(isset($_POST['Tambah'])){
-		mysqli_query($kon,"INSERT INTO setup_dasboard (nama, konten, gambar) value ('$judul', '$_POST[konten]', '')") or die(mysqli_error($kon));
+        $judul=ucwords(strtolower($_POST['nama']));
+        $waktu = date('Y-m-d');
+		mysqli_query($kon,"INSERT INTO setup_dasboard (nama, konten, gambar, waktu) VALUES ('$judul', '$_POST[konten]', '', '$waktu')") or die(mysqli_error($kon));
 		
 	}
 	
-	else if(isset($_POST['Edit'])){		
+	else if(isset($_POST['Edit'])){
+        $judul=ucwords(strtolower($_POST['nama']));
+        $waktu = date('Y-m-d');		
 		if(empty($_POST['image'])){
 			mysqli_query($kon,"UPDATE setup_dasboard SET nama ='$judul', konten ='$_POST[konten]' WHERE id_dasboard = '$_POST[id]'");
 		}
@@ -29,6 +33,8 @@ if(isset($_SESSION['user_admin'])){
 	}
 	
 	else if(isset($_POST['Delete'])){
+        $judul=ucwords(strtolower($_POST['nama']));
+        $waktu = date('Y-m-d');
 		mysqli_query($kon,"DELETE FROM setup_dasboard WHERE id_dasboard = '$_POST[id]'");
 	
 	}
@@ -70,11 +76,11 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row col-lg-10">
                         	<form name="setupBeranda" action="setupBeranda.php" method="post" enctype="multipart/form-data">
 							<?php
-                                if (isset($_GET['id']))
-                                {
-                                $comot_id=mysqli_query($kon,"select * from setup_dasboard where id_dasboard=".$_GET['id']);   
-                                $ngisi=mysqli_fetch_row($comot_id);
-                                }                       
+                                 $ngisi = array("", "", "", ""); // Inisialisasi variabel ngisi sebagai array kosong
+                                 if (isset($_GET['id'])) {
+                                     $comot_id = mysqli_query($kon, "SELECT * FROM setup_dasboard WHERE id_dasboard=".$_GET['id']);   
+                                     $ngisi = mysqli_fetch_row($comot_id);
+                                 }                               
                             ?>
                                 <fieldset>
                                     <input name="id" type="hidden" value="<?php echo $ngisi[0]; ?>">

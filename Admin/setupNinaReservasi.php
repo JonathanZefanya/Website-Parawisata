@@ -7,16 +7,18 @@ if(isset($_SESSION['user_admin'])){
 	$username	=$_SESSION['user_admin'];
 	$level		=$_SESSION['level'];
 	
-	$judul=ucwords(strtolower($_POST['judul']));
+	// $judul=ucwords(strtolower($_POST['judul']));
 	if(isset($_POST['Tambah']))
 	{
+        $judul=ucwords(strtolower($_POST['judul']));
 		mysqli_query($kon,"INSERT INTO setup_about (kat_about, judul_about, konten_about)
 				value ('reservasi', '$judul', '$_POST[konten]')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 	}
 	
 	else if(isset($_POST['Edit']))
 	{
+        $judul=ucwords(strtolower($_POST['judul']));
 		mysqli_query($kon,"UPDATE setup_about SET kat_about='reservasi', judul_about='$judul', konten_about='$_POST[konten]' WHERE id_about= '$_POST[id]'");
 	
 	}
@@ -64,11 +66,16 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row col-lg-10">
                         	<form name="setupNinaReservasi" action="setupNinaReservasi.php" method="post" enctype="multipart/form-data">
 							<?php
-								if (isset($_GET['id']))
-								{
-								$comot_id=mysqli_query($kon,"select * from setup_about where id_about=".$_GET['id']);   
-								$ngisi=mysqli_fetch_row($comot_id);
-								}
+								if (isset($_GET['id'])) {
+                                    $comot_id = mysqli_query($kon, "SELECT * FROM setup_about WHERE id_about=" . $_GET['id']);
+                                    if ($comot_id && mysqli_num_rows($comot_id) > 0) {
+                                        $ngisi = mysqli_fetch_row($comot_id);
+                                    } else {
+                                        $ngisi = [null, null, '', ''];
+                                    }
+                                } else {
+                                    $ngisi = [null, null, '', ''];
+                                }					 
 													 
 							?>
                                 <fieldset>

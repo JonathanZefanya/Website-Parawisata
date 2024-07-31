@@ -93,7 +93,7 @@ if (isset($_POST['Login'])){
                             </fieldset>
                         </form>
                         <hr>
-                        <center>Distributed by <a href="https://blogbugabagi.blogspot.com" target="_blank" rel="noopener noreferrer">BlogBugaBagi</a></center>
+                        <center>Created by <a href="https://jonathanzefanya.github.io/Portfolio-Pribadi/" target="_blank" rel="noopener noreferrer">Jonathan Zefanya</a></center>
                     </div>
                 </div>
             </div>

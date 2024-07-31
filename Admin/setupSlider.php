@@ -11,7 +11,7 @@ if(isset($_SESSION['user_admin'])){
 		if(empty($_POST['image'])){
 			mysqli_query($kon,"INSERT INTO setup_slide (judul, konten, gambar)
 				value ('$_POST[nama]', '$_POST[konten]', '')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 		}
 		$nama_file   = $_FILES['image']['name'];
 		$lokasi_file = $_FILES['image']['tmp_name'];
@@ -20,7 +20,7 @@ if(isset($_SESSION['user_admin'])){
 			
 			mysqli_query($kon,"INSERT INTO setup_slide (judul, konten, gambar)
 				value ('$_POST[nama]', '$_POST[konten]', '$nama_file')")
-				or die(mysqli_error());
+				or die(mysqli_error($kon));
 		}
 	}
 	
@@ -79,10 +79,17 @@ if(isset($_SESSION['user_admin'])){
                         <div class="row col-lg-10">
                         	<form name="setupSlider" action="setupSlider.php" method="post" enctype="multipart/form-data">
 							<?php
-								if (isset($_GET['id'])){
-									$comot_id=mysqli_query($kon,"select * from setup_slide where id_slide=".$_GET['id']);   
-									$ngisi=mysqli_fetch_row($comot_id);
-								}					 
+								if (isset($_GET['id'])) {
+                                    $comot_id = mysqli_query($kon, "SELECT * FROM setup_slide WHERE id_slide=" . $_GET['id']);
+                                    if ($comot_id && mysqli_num_rows($comot_id) > 0) {
+                                        $ngisi = mysqli_fetch_row($comot_id);
+                                    } else {
+                                        echo "Data tidak ditemukan.";
+                                        $ngisi = array('', '', '', '');
+                                    }
+                                } else {
+                                    $ngisi = array('', '', '', '');
+                                }					 
 							?>
                                 <fieldset>
                                     <input name="id" type="hidden" value="<?php echo $ngisi[0]; ?>">

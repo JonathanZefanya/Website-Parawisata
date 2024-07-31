@@ -54,7 +54,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-laptop fa-fw"></i> Setup About Sumbar<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-laptop fa-fw"></i> Setup About Papua<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="setupSumbarProfil.php">Profil</a></li>
                         <li><a href="setupSumbarSejarah.php">Sejarah</a></li>
