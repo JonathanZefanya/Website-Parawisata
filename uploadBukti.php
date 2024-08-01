@@ -13,7 +13,7 @@ if(isset($_SESSION['username'])){
 		if(!empty($lokasi_file)){
 			move_uploaded_file($lokasi_file, "images/$nama_file");
 			
-			$query = mysqli_query($kon,"INSERT INTO tbl_bukti (id_pesan, file) VALUE ('".$_GET[id]."','$nama_file')");
+			$query = mysqli_query($kon,"INSERT INTO tbl_bukti (id_pesan, file) VALUE ('".$_GET['id']."','$nama_file')");
 			
 			if($query){
 				header("location:uploadBukti.php?status=Anda Berhasil Upload Bukti Pembayaran");

@@ -49,6 +49,7 @@ if(isset($_SESSION['user_admin'])){
                     <div class="panel-body">   
                         <form name="setupMember" action="setupMember.php" method="post" enctype="multipart/form-data">
                         <?php
+                            $ngisi = array('id_user' => '', 'username' => '', 'password' => '', 'nama_user' => '', 'email_user' => '', 'no_hp' => '', 'jekel' => '', 'alamat' => '', 'tgl_lahir' => '', 'no_rek' => '', 'nama_rek' => '');
                             if (isset($_GET['id']))
                             {
                             $comot_id=mysqli_query($kon,"SELECT * FROM tbl_user WHERE id_user=".$_GET['id']);   

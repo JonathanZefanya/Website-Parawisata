@@ -51,9 +51,9 @@ if(isset($_SESSION['username'])){
 		<div class="row">
             <div class="span4">
 				<p class="tertiary-text-secondary"><strong>WISATHAN Tour and Travel </strong><br />
-				Perumahan Taman Aries<br />
-				Blok F Nomor 5<br />
-				Ngawi, Jawa Timur</p>
+				Institut Teknologi Indonesia<br />
+				Gedung D Nomor 7<br />
+				Tangerang Selatan, Jawa Barat</p>
 				<p class="tertiary-text-secondary">anastasiadpp@gmail.com<br />
 				081296703788</p>
 				<p class="tertiary-text-secondary">BNI : 0350520214 a/n JONATHAN NATHANNAEL ZEFANYA<br />
@@ -67,7 +67,7 @@ if(isset($_SESSION['username'])){
 				<?php echo $isi_tbl['alamat'];?></p>	
             </div>
 			<div class="span4 place-right">
-				<p class="tertiary-text-secondary text-right">Tasia-00<?php echo $isi_tbl['id_pesan'];?></p>
+				<p class="tertiary-text-secondary text-right">wisathan-00<?php echo $isi_tbl['id_pesan'];?></p>
 				<p class="tertiary-text-secondary text-right">Tgl Pesan: <?php echo $isi_tbl['tgl_pesan'];?><br />
 				Tgl Perjalanan: <?php echo $isi_tbl['tgl_tour'];?></p>	
             </div>
@@ -111,7 +111,7 @@ if(isset($_SESSION['username'])){
 			
         </div>
 		<a class="image-button primary image-left" href="javascript:window.print()"><i class="icon-printer bg-cobalt"></i>Print</a>
-		<a class="image-button danger" href="ticket.php?id=<?php echo $isi_tbl['id_pesan'];?>" target="_blank">Download Tiket PDF<i class="icon-file-pdf bg-red"></i></a>
+		<!-- <a class="image-button danger" href="ticket.php?id=<?php echo $isi_tbl['id_pesan'];?>" target="_blank">Download Tiket PDF<i class="icon-file-pdf bg-red"></i></a> -->
     </div>
 	</form>
     <!-- ---------------------------------------- ISI TAB ------------------------------------- -->

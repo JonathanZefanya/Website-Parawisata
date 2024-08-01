@@ -34,7 +34,7 @@ include "config/koneksi.php";
 	<div class="container row">
         <div class="grid fluid">
             <div class="border padding20">
-				<legend class="text-right"><h2>Daftar Penginapan di Jawa Timur</h2></legend>
+				<legend class="text-right"><h2>Daftar Penginapan di Papua</h2></legend>
 					<div class="accordion" data-role="accordion" data-closeany="true">
                         <?php
 						$comot=	mysqli_query($kon,"SELECT * FROM tbl_hotel,tbl_daerah WHERE tbl_hotel.kd_daerah=tbl_daerah.kode");   

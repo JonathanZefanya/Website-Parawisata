@@ -25,7 +25,7 @@ include "config/koneksi.php";
     <style>
     </style>
 
-<title>Tentang Jawa Timur</title>
+<title>Tentang Papua</title>
 
 </head>
 
@@ -52,7 +52,7 @@ include "config/koneksi.php";
 						$is="Kebudayaan";
 					}
 				?>
-				<legend class="text-right"><h2><?php echo $is; ?> Jawa Timur</h2></legend>
+				<legend class="text-right"><h2><?php echo $is; ?> Papua</h2></legend>
                         <?php
 						$comot=	mysqli_query($kon,"SELECT * FROM setup_sumbar where kat_sumbar='$_GET[post]'");   
 						while($ngisi=	mysqli_fetch_array($comot)){

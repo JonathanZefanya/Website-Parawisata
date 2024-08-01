@@ -56,6 +56,7 @@ if(isset($_SESSION['user_admin'])){
                     <div class="panel-body">   
                         <form name="setupAdmin" action="setupAdmin.php" method="post" enctype="multipart/form-data">
                         <?php
+                            $ngisi = ['user_admin' => '', 'pass_admin' => '', 'nama' => '', 'level' => '', 'aktif' => ''];
                             if (isset($_GET['user']))
                             {
                             $comot_id = mysqli_query($kon,"SELECT * FROM tbl_admin WHERE user_admin='".$_GET['user']."'");   

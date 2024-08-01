@@ -24,7 +24,7 @@ if(isset($_SESSION['username'])){
     h2 { padding: 0; margin: 0; color: #222222; font-size: 5mm; position: relative; }
 -->
 </style>
-<page format="105x200" orientation="L" backcolor="#AAAACC" style="font: arial;">
+<page format="105x200" orientation="L" backcolor="#AAAACC style="font: arial;">
     <div style="rotate: 90; position: absolute; width: 100mm; height: 4mm; left: 195mm; top: 0; font-style: italic; font-weight: normal; text-align: center; font-size: 2.5mm;">
         Harga penginapan bisa saja berubah sewaktu-waktu, dengan ketentuan tertentu.
     </div>
@@ -69,21 +69,21 @@ if(isset($_SESSION['username'])){
      $content = ob_get_clean();
 
     // convert
-    require_once(dirname(__FILE__).'./html2pdf/html2pdf.class.php');
-    try
-    {
-        $html2pdf = new HTML2PDF('P', 'A4', 'fr', true, 'UTF-8', 0);
-        $html2pdf->pdf->SetDisplayMode('fullpage');
-        $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
-        $html2pdf->Output('ticket00'.$isi_tbl['id_pesan'].'-'.date('Y/m/d').'.pdf');
-    }
-    catch(HTML2PDF_exception $e) {
-        echo $e;
-        exit;
-    }
+//     require_once(dirname(__FILE__).'/vendor/autoload.php');
+//     try
+//     {
+//         $html2pdf = new HTML2PDF('P', 'A4', 'fr', true, 'UTF-8', 0);
+//         $html2pdf->pdf->SetDisplayMode('fullpage');
+//         $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
+//         $html2pdf->Output('ticket00'.$isi_tbl['id_pesan'].'-'.date('Y/m/d').'.pdf');
+//     }
+//     catch(HTML2PDF_exception $e) {
+//         echo $e;
+//         exit;
+//     }
 
-}else{
-	session_destroy();
-	header('Location:formRegistrasi.php?status=Silahkan Login');
+// }else{
+// 	session_destroy();
+// 	header('Location:formRegistrasi.php?status=Silahkan Login');
 }
 ?>

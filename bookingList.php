@@ -72,7 +72,7 @@ if(isset($_SESSION['username'])){
 						}
 					?>
                     	<tr>
-                        	<td>TASIA-00<?php echo $isi_tbl['id_pesan']; ?></td>
+                        	<td>WISATHAN-00<?php echo $isi_tbl['id_pesan']; ?></td>
                             <td><?php echo $isi_tbl['tgl_pesan']; ?></td>
                             <td><?php echo $isi_tbl['tgl_tour']; ?></td>
                             <td><?php echo $isi_tbl['nama_paket']; ?></td>

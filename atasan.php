@@ -18,7 +18,7 @@
 					</ul>  
 				</li>
 				<li>
-					<a class="dropdown-toggle" href="#"> Tentang Jawa Timur </a>
+					<a class="dropdown-toggle" href="#"> Tentang Papua </a>
 					<ul class="dropdown-menu" data-role="dropdown">
 						<li><a href="sumbar.php?post=profil">Profil</a></li>
 						<li><a href="sumbar.php?post=sejarah">Sejarah</a></li>
@@ -33,36 +33,22 @@
 				<a class="element brand" href="contact.php">Contact</a>
 				<!-- -------------------------MENU KANAN---------------------------- -->
 					 
-				<a class="element place-right" href="http://facebook.com/bugabagiblog">
+				<a class="element place-right" href="https://www.facebook.com/pmeme.handal.94/">
 						<span class="icon-facebook" style="background: white;
 						   color: black;
 						   padding: 3px;
 						   border-radius: 50%">
 						</span>
 				</a>
-				<a class="element place-right" href="https://twitter.com/anastasyadpp">
-						<span class="icon-twitter" style="background: white;
-						   color: black;
-						   padding: 3px;
-						   border-radius: 50%">
-						</span>
-				</a>
-				<a class="element place-right" href="https://plus.google.com/u/0/115730609418530213638">
-						<span class="icon-google-plus" style="background: white;
-						   color: black;
-						   padding: 3px;
-						   border-radius: 50%">
-						</span>
-				</a>
-				<a class="element place-right" href="https://instagram.com/blogbugabagi">
+				<a class="element place-right" href="https://www.instagram.com/xeadesta/">
 						<span class="icon-instagram" style="background: white;
 						   color: black;
 						   padding: 3px;
 						   border-radius: 50%">
 						</span>
 				</a>
-				<a class="element place-right" href="http://anastasiadpp.blog.gravicodev.id">
-						<span class="icon-wordpress" style="background: white;
+				<a class="element place-right" href="https://github.com/jonathanzefanya">
+						<span class="icon-github" style="background: white;
 						   color: black;
 						   padding: 3px;
 						   border-radius: 50%">

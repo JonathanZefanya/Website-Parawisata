@@ -82,7 +82,7 @@ if(isset($_SESSION['user_admin'])){
                                     <input name="id" type="hidden" value="<?php echo $ngisi[0]; ?>">
                                 	<div class="form-group">
                                     	<label>Judul</label>
-                                        <input class="form-control" name="judul" type="text" placeholder="Input nama paket" 
+                                        <input class="form-control" name="judul" type="text" placeholder="Input Judul" 
                             				value="<?php echo $ngisi[2]; ?>">
                                     </div>
                                 	<div class="form-group">

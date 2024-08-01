@@ -34,7 +34,7 @@ if(isset($_SESSION['user_admin'])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setup Pariwisata Jawa Timur</title>
+    <title>Setup Pariwisata Papua</title>
     <!-- Core CSS - Include with every page -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -61,10 +61,10 @@ if(isset($_SESSION['user_admin'])){
             <div class="row col-lg-12">
                 
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h3>Setup Periwisata Jawa Timur</h3></div>
+                    <div class="panel-heading"><h3>Setup Periwisata Papua</h3></div>
                     <div class="panel-body">
                         <div class="row col-lg-10">
-                        	<form name="setupSumbarWisata" action="setupSumbarWisata.php" method="post" enctype="multipart/form-data">
+                        	<form name="setupPapuaWisata" action="setupSumbarWisata.php" method="post" enctype="multipart/form-data">
 							<?php
                                 $ngisi = array("", "", "", "");
 								if (isset($_GET['id']))
@@ -77,7 +77,7 @@ if(isset($_SESSION['user_admin'])){
                                     <input name="id" type="hidden" value="<?php echo $ngisi[0]; ?>">
                                 	<div class="form-group">
                                     	<label>Judul</label>
-                                        <input class="form-control" name="judul" type="text" placeholder="Input nama paket" 
+                                        <input class="form-control" name="judul" type="text" placeholder="Input Judul" 
                             				value="<?php echo $ngisi[2]; ?>">
                                     </div>
                                 	<div class="form-group">
