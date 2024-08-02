@@ -107,7 +107,7 @@ include "config/koneksi.php";
 				</div>
 				
 				<div class="panel no-border">
-                    <div class="panel-header ribbed-cyan fg-white">EAST JAVA</div>
+                    <div class="panel-header ribbed-cyan fg-white">PAPUA</div>
                     <div class="panel-content fg-dark nlp nrp">
 						<div class="tile double live" data-role="live-tile">
 							<div class="tile-content image">
