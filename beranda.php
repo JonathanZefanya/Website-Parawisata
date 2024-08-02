@@ -44,14 +44,13 @@ include "config/koneksi.php";
 				<div class="panel no-border">
                     <div class="panel-header ribbed-cyan fg-white">RECENT UPDATES</div>
 					<div class="panel-content fg-dark nlp nrp">
-					<div><a href="https://kampoengngawi.com/file.post.news/seni-kejadian-upacara-kebo-ketan/" style="font-size: 16px; text-decoration:none; color: #616469;">UPACARA KEBO KETAN?</a></div>
-					<div><a href="https://travel.detik.com/domestic-destination/d-3597043/kisah-di-balik-berdirinya-museum-trinil" style="font-size: 16px; text-decoration:none; color: #616469;">MANUSIA PURBA DAN MUSEUM TRINIL NGAWI </a>
-					</div>
-					<div><a href="https://www.kompasiana.com/www.teguhhariawan/kisah-pilu-dibalik-keindahan-ranu-grati_552e5e856ea834a2548b4582" style="font-size: 16px; text-decoration:none; color: #616469;">MISTERI AMFIBI TENGGELAM DI DANAU RANU GATI </a></div>
-					<div><a href="https://kampoengngawi.com/file.post.news/menikmati-kemegahan-alun-alun-ngawi/" style="font-size: 16px; text-decoration:none; color: #616469;">MENIKMATI KEMEGAHAN ALUN-ALUN NGAWI</a></div>
-					<div><a href="https://news.detik.com/jawatimur/1629682/pantai-klayar-pacitan-dikenal-eksotis-namun-berbahaya" style="font-size: 16px; text-decoration:none; color: #616469;">PANTAI KLAYAR, EKSOTIS NAMUN BERBAHAYA</a></div>
-					</div>
-					</div>
+					<div><a href="https://fokuspapua.com/belajar-mengelola-destinasi-wisata-berbasis-data/" style="font-size: 16px; text-decoration:none; color: #616469;">Belajar Mengelola Destinasi Wisata Berbasis Data</a></div><br>
+					<div><a href="https://www.pasificpos.com/ini-rekomendasi-bank-indonesia-untuk-majukan-sektor-pariwisata-papua/" style="font-size: 16px; text-decoration:none; color: #616469;">Ini Rekomendasi Bank Indonesia untuk Majukan Sektor Pariwisata Papua </a></div><br>
+					<div><a href="https://www.detikpapua.com/2024/08/01/pemprov-papua-pegunungan-lakukan-pencanangan-agro-wisata-sebagai-kawasan-pertanian-buah-markisa-dan-kelapa-hutan-distrik-makki-kabupaten-lanny-jaya/#google_vignette" style="font-size: 16px; text-decoration:none; color: #616469;">Pemprov Papua Pegunungan Lakukan Pencanangan Agro Wisata Sebagai Kawasan Pertanian Buah Markisa dan Kelapa Hutan Distrik Makki Kabupaten Lanny Jaya </a></div><br>
+					<div><a href="https://wartaekonomi.co.id/read540814/jalan-daerah-3-t-papua-selesai-dibangun-permudah-akses-masyarakat" style="font-size: 16px; text-decoration:none; color: #616469;">Jalan Daerah 3 T Papua Selesai Dibangun, Permudah Akses Masyarakat</a></div><br>
+					<div><a href="https://www.antaranews.com/berita/4225227/golden-rama-bali-raja-ampat-labuan-bajo-jadi-favorit-wisman" style="font-size: 16px; text-decoration:none; color: #616469;">Golden Rama: Bali-Raja Ampat-Labuan Bajo jadi favorit wisman</a></div><br>
+				</div>
+			</div>
 					
 				<div class="panel no-border">
                     <div class="panel-header ribbed-cyan fg-white">KOMENTAR</div>
