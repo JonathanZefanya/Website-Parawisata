@@ -32,8 +32,11 @@
 	<br />
 	<div class="ui text container center aligned">
     <h1 class="ui header"></h1>
-</div>
+  </div>
     <div class="container" data-load="beranda.php"></div>
+    <br>
+    <h2 class="text-center">Kunjungi Kami</h2>
+    <br>
     <div class="">
 						<center><div id="googleMap" data-role="googleMap"></div></center> <br />
 						<style>
@@ -42,22 +45,22 @@
 							width: 100%;
 						   }
 						</style>
-</div>
-<script>
-      function initMap() { 
-        var iti = {lat: -6.343179, lng: 106.675696};
-        var map = new google.maps.Map(document.getElementById('googleMap'), {
-          zoom: 15,
-          center: iti
-        });
-        var marker = new google.maps.Marker({
-          position: iti,
-          map: map
-        });
-      }
-    </script>
+    </div>
+    <script>
+          function initMap() { 
+            var iti = {lat: -6.3429453, lng: 106.6763565};
+            var map = new google.maps.Map(document.getElementById('googleMap'), {
+              zoom: 15,
+              center: iti
+            });
+            var marker = new google.maps.Marker({
+              position: iti,
+              map: map
+            });
+          }
+        </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrUIokfRmfo0uia86H1NTfV9UfqQFKpTI&callback=initMap"></script>
-    <footer class="dark" data-load="bawahan.html"></footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrUIokfRmfo0uia86H1NTfV9UfqQFKpTI&callback=initMap"></script>
+        <footer class="dark" data-load="bawahan.html"></footer>
 </body>
 </html>
