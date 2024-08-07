@@ -1,59 +1,65 @@
-<h1>WELCOMETO WISATHAN</h1>					|
-========================================================|			|
-IG	: instagram.com/xeadesta			|
-FB	: facebook.com/p.memehandal87			|
-========================================================|
-lets play		|
-========================================================|
-Terima kasih :) :) 					|
-========================================================|
-::::::::::************** CREDIT *************:::::::::::|
-JONATHAN NATHANNAEL ZEFANYA				|
-https://github.com/jonathanzefanya				|			
-========================================================|
-							|
-===========---//INSTALASI SOURCE CODE\\---==============|
-							|
--Ekstrak source code					|
--Jika menggunakan xampp simpan folder WISATHAN		|
- ke dalam folder htdocs					|
--Buat database baru dengan nama wisata		|
--import file wisata.sql yang ada di folder db 	|
- ke dalam database yang dibuat tadi			|
--Buka browser lalu jalankan dengan menuliskan 		|
- localhost/WISATHAN					|
--halaman login admin di localhost/WISATHAN/admin	|
-							|
-Akun Admin			Akun Operator		|
-user: admin			user : operator		|
-pass: admin			pass : operator		|
-========================================================|
-=============-----/////FAQ ERROR\\\\\-----==============
+# WELCOMETO WISATHAN
 
-??. Unknown database ''
-!!. Database belum dibuat atau nama database tidak sama
->>. Buat database baru atau perbaiki nama database atau
-    sesuaikan pengaturan koneksi database
+========================================================
 
-??. Access denied for user ''
-!!. username atau password akun phpmyadmin tidak sesuai
->>. sesuaikan koneksi database dengan akun phpmyadmin
+## Social Media
+- **Instagram**: [instagram.com/xeadesta](https://instagram.com/xeadesta)
+- **Facebook**: [facebook.com/p.memehandal87](https://facebook.com/p.memehandal87)
 
-??. Uncaught Error:Call to undefined function mysqli_connect()
-!!. ekstensi mysqli tidak tersedia atau sudah tidak di dukung
->>. Gunakan versi PHP5 atau versi xampp yang lawas (jadul)
+========================================================
 
-??. mysqli::real_connect(): / Warning: mysqli_connect():
-!!. ekstensi mysqli tidak tersedia atau tidak di dukung
->>. Gunakan versi PHP7 ke atas atau versi Xampp terbaru
+## Lets Play
 
-??. Tampilan antarmuka tidak muncul atau acak-acakan
-!!. file css / style tidak ditemukan atau belum responsif
->>. Gunakan internet saat menjalankan-nya atau hapus folder
-    yang membungkus folder utama atau master
+Terima kasih :) :)
 
+========================================================
 
-#NOTE:
-Beberapa solusi penanganan error di atas mungkin saja tidak
-dapat menyelesaikan masalah error dikarenakan beberapa faktor
-lain atau solusi lain.
+## CREDIT
+**Jonathan Nathannael Zefanya**  
+[https://github.com/jonathanzefanya](https://github.com/jonathanzefanya)
+
+========================================================
+
+## INSTALASI SOURCE CODE
+
+1. Ekstrak source code.
+2. Jika menggunakan XAMPP, simpan folder `WISATHAN` ke dalam folder `htdocs`.
+3. Buat database baru dengan nama `wisata`.
+4. Import file `wisata.sql` yang ada di folder `db` ke dalam database yang dibuat tadi.
+5. Buka browser lalu jalankan dengan menuliskan `localhost/WISATHAN`.
+6. Halaman login admin di `localhost/WISATHAN/admin`.
+
+### Akun Admin
+- **User**: admin
+- **Pass**: admin
+
+### Akun Operator
+- **User**: operator
+- **Pass**: operator
+
+========================================================
+
+## FAQ ERROR
+
+**?? Unknown database ''**  
+**!!.** Database belum dibuat atau nama database tidak sama  
+**>>.** Buat database baru atau perbaiki nama database atau sesuaikan pengaturan koneksi database
+
+**?? Access denied for user ''**  
+**!!.** Username atau password akun phpMyAdmin tidak sesuai  
+**>>.** Sesuaikan koneksi database dengan akun phpMyAdmin
+
+**?? Uncaught Error: Call to undefined function mysqli_connect()**  
+**!!.** Ekstensi `mysqli` tidak tersedia atau sudah tidak didukung  
+**>>.** Gunakan versi PHP5 atau versi XAMPP yang lawas (jadul)
+
+**?? mysqli::real_connect(): / Warning: mysqli_connect():**  
+**!!.** Ekstensi `mysqli` tidak tersedia atau tidak didukung  
+**>>.** Gunakan versi PHP7 ke atas atau versi XAMPP terbaru
+
+**?? Tampilan antarmuka tidak muncul atau acak-acakan**  
+**!!.** File CSS / style tidak ditemukan atau belum responsif  
+**>>.** Gunakan internet saat menjalankannya atau hapus folder yang membungkus folder utama atau master
+
+## NOTE:
+Beberapa solusi penanganan error di atas mungkin saja tidak dapat menyelesaikan masalah error dikarenakan beberapa faktor lain atau solusi lain.
