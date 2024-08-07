@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Agu 2024 pada 11.48
+-- Waktu pembuatan: 07 Agu 2024 pada 11.08
 -- Versi server: 8.2.0
 -- Versi PHP: 8.2.4
 
@@ -64,7 +64,8 @@ CREATE TABLE `komentar` (
 INSERT INTO `komentar` (`id_komentar`, `nama`, `komentar`, `waktu`) VALUES
 (3, 'Nahida', 'Asik', '2024-07-24 17:22:35'),
 (4, 'Matthew Tirtawidjaja', 'Websitenya keren dan sangat bermanfaat', '2024-08-01 08:14:38'),
-(5, 'Jonathan Zefanya', 'Gw ownernya hehehe', '2024-08-01 08:14:54');
+(5, 'Jonathan Zefanya', 'Gw ownernya hehehe', '2024-08-01 08:14:54'),
+(6, 'Anonymous', 'Keren', '2024-08-05 17:36:25');
 
 -- --------------------------------------------------------
 
@@ -85,7 +86,7 @@ CREATE TABLE `setup_about` (
 
 INSERT INTO `setup_about` (`id_about`, `kat_about`, `judul_about`, `konten_about`) VALUES
 (2, 'profil', 'Profil Wisathan', '<p>WISATHAN&nbsp;adalah sebuah jasa tour and travel wisata Papua. Kami mengedepankan kepuasan wisatawan yang menggunakan jasa layanan kami. Kantor kami terletak di <strong>Institut Teknologi Indonesia,Serpong,Tangerang Selatan Jawa Barat</strong>. Semoga Anda senang dan puas melakukan perjalanan bersama kami.</p>'),
-(7, 'pembayaran', 'Cara Pembayaran', '<p>Cara pembayaran ada 2 alternatif yang bisa dipilih. Pertama anda bisa melakukan pembayaran langsung ke kantor kami atau dengan cara kedua bisa melakukan transfer melalui nomor rekening kami yang tersedia. Dengan ketentuan sebagai berikut :</p>\r\n<ol>\r\n<li>Pembayaran Langsung\r\n<ul>\r\n<li>Pembayaran langung dikhususkan untuk pelanggan yang berada dekat dengan kantor kami.</li>\r\n<li>Pembayaran dilakukan 5 hari sebelum keberangkatan.</li>\r\n<li>Syarat pembayaran harus melampirkan Invoice dan Tiket yang telah di booking.</li>\r\n<li>Pembayaran akan dilayani di jam kerja.</li>\r\n</ul>\r\n</li>\r\n<li>Pembayaran via Transfer\r\n<ul>\r\n<li>Pembayaran ini dimaksudkan untuk pelanggan yang dari luar kota maunpun yang menginginkan proses praktis.</li>\r\n<li>Pembayaran selambat-lambatnya harus telah diterima oleh kami 5 hari sebelum hari keberangkatan tour.</li>\r\n<li>Transfer dapat dilakukan ke nomor rekening berikut :\r\n<ul>\r\n<li>BNI : 0350520214&nbsp;a/n Jonathan Nathannael Zefanya</li>\r\n<li>Mandiri : 1710000395346 a/n&nbsp;Jonathan Nathannael Zefanya</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n</ol>'),
+(7, 'pembayaran', 'Cara Pembayaran', '<p>Cara pembayaran ada 2 alternatif yang bisa dipilih. Pertama anda bisa melakukan pembayaran langsung ke kantor kami atau dengan cara kedua bisa melakukan transfer melalui nomor rekening kami yang tersedia. Dengan ketentuan sebagai berikut :</p>\r\n<ol>\r\n<li>Pembayaran Langsung\r\n<ul>\r\n<li>Pembayaran langung dikhususkan untuk pelanggan yang berada dekat dengan kantor kami.</li>\r\n<li>Pembayaran dilakukan 5 hari sebelum keberangkatan.</li>\r\n<li>Syarat pembayaran harus melampirkan Invoice dan Tiket yang telah di booking.</li>\r\n<li>Pembayaran akan dilayani di jam kerja.</li>\r\n</ul>\r\n</li>\r\n<li>Pembayaran via Transfer\r\n<ul>\r\n<li>Pembayaran ini dimaksudkan untuk pelanggan yang dari luar kota maunpun yang menginginkan proses praktis.</li>\r\n<li>Pembayaran selambat-lambatnya harus telah diterima oleh kami 5 hari sebelum hari keberangkatan tour.</li>\r\n<li>Transfer dapat dilakukan ke nomor rekening berikut :\r\n<ul>\r\n<li>BNI : 0350520214&nbsp;a/n Jonathan Nathannael Zefanya</li>\r\n<li>Mandiri : 1710000395346 a/n&nbsp;Jonathan Nathannael Zefanya</li>\r\n<li>DANA: 083807914090&nbsp;a/n&nbsp;Jonathan Nathannael Zefanya</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n</ol>'),
 (8, 'syarat', '', '<p>Syarat dan Ketentuan ini berguna untuk membantu anda dalam melakukan pembookingan sesuai dengan ketentuan-ketentuan yang telah kami buat. Sehingga anda nantinya tidak merasa rugi dan salah dalam memilih paket ataupun penginapan nantinya. Seilahkan cermati ketentuan-ketentuan yang telah dibuat dan lanjutkan dengan melakukan pembookingan.</p>'),
 (12, 'reservasi', '', '<ol>\r\n<li>Sebelum melakukan pembookingan pastikan anda&nbsp;<a href=\"formRegistrasi.php\">Login</a>&nbsp;terlebih dulu ke website ini.</li>\r\n<li>Jika belum memiliki akun, makan diperkenankan anda untuk malakukan&nbsp;<a href=\"formRegistrasi.php\">Registrasi</a></li>\r\n<li>Setelah melakukan Login, lengkapi Profil anda jika memang Profil anda masih belum dilengkapi</li>\r\n<li>Seletah melengkapi Profil anda, lakukan pembookingan pada menu Booking.</li>\r\n<li>Lalu Pilih Paket sesuai dengan yang anda inginkan.</li>\r\n<li>Jika anda memilih untuk cara pembayaran secara Bayar diTempat, maka anda bisa langsung melakukan Cetak Tiket.</li>\r\n</ol>'),
 (13, 'syarat', 'Ketentuan Kapasitas Hotel', '<p>Jumlah maksimal pengunjung per kamar:</p>\r\n<ul style=\"list-style-type: circle;\">\r\n<li>Kelas Standar, mak. 2 orang</li>\r\n<li>Kelas Superior, mak. 2 orang</li>\r\n<li>Kelas Delux, mak. 2/4 orang*</li>\r\n<li>Kelas Suit Keluarga, mak. 4 orang</li>\r\n</ul>\r\n<p>*ketentuan dapat berubah sewaktu-waktu</p>'),
@@ -223,12 +224,11 @@ CREATE TABLE `tbl_bukti` (
 --
 
 INSERT INTO `tbl_bukti` (`id_bukti`, `id_pesan`, `file`) VALUES
-(1, 1, 'cropped-GravityNew-01.png'),
-(2, 2, 'BI.png'),
-(3, 2, 'cropped-GravityNew-01.png'),
 (4, 6, '1ba2a59c76d2acf1aa22e372fd98ff6c.jpg'),
 (5, 6, '1ba2a59c76d2acf1aa22e372fd98ff6c.jpg'),
-(6, 9, '1ba2a59c76d2acf1aa22e372fd98ff6c.jpg');
+(6, 9, '1ba2a59c76d2acf1aa22e372fd98ff6c.jpg'),
+(7, 13, 'c3106f3c7da48309b1ef100503519fd0.jpg'),
+(8, 13, '1ba2a59c76d2acf1aa22e372fd98ff6c.jpg');
 
 -- --------------------------------------------------------
 
@@ -247,7 +247,8 @@ CREATE TABLE `tbl_daerah` (
 --
 
 INSERT INTO `tbl_daerah` (`id_daerah`, `kode`, `daerah`) VALUES
-(7, 'PB', 'Papua Barat');
+(7, 'PB', 'Papua Barat'),
+(8, 'JP', 'Jayapura');
 
 -- --------------------------------------------------------
 
@@ -296,10 +297,14 @@ INSERT INTO `tbl_hotel` (`id_hotel`, `kd_daerah`, `hotel`, `bintang`, `harga`, `
 (25, 'SUB01', 'Tidak Menginap', 1, 0, '<p>Untuk paket One-Way</p>'),
 (26, 'PB', 'Tidak Menginap', 5, 0, '<p>Tidak Menginap</p>');
 INSERT INTO `tbl_hotel` (`id_hotel`, `kd_daerah`, `hotel`, `bintang`, `harga`, `ket_hotel`) VALUES
-(27, 'PB', 'Katembe Private Island', 4, 4000000, '<div class=\"hJVAU\" data-test-target=\"list-card-address\"><span class=\"biGQs _P fiohW hmDzD\">Waisai, Papua Barat 98482 Indonesia</span></div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>7.5 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Paling Hemat No.&nbsp;1&nbsp;dari&nbsp;3&nbsp;di&nbsp;Hotel Dekat Raja Ampat Dive Resort</span></div>'),
-(28, 'PB', 'Korpak Villa & Resort Waisay Raja Ampat', 5, 1600000, '<div class=\"vhaQX scTWu\">\r\n<div class=\"DgJpu\">\r\n<div class=\"luFhX o W f u w JSdbl\">\r\n<div class=\"hgCGO\">Jl. Poros Waiwo, Waisai, Papua Barat 98482 Indonesia</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>4.1 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Paling Hemat No.&nbsp;2&nbsp;dari&nbsp;3&nbsp;di&nbsp;Hotel Dekat Raja Ampat Dive Resort</span></div>'),
-(29, 'PB', 'Kayafyof Homestay', 5, 750000, '<div class=\"hJVAU\" data-test-target=\"list-card-address\"><span class=\"biGQs _P fiohW hmDzD\">Kampung Arborek, Besir, Papua Barat 98482 Indonesia</span></div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>28.0 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Paling Hemat No.&nbsp;3&nbsp;dari&nbsp;3&nbsp;di&nbsp;Hotel Dekat Raja Ampat Dive Resort</span></div>'),
-(30, 'PB', 'Raja Ampat Dive Lodge', 4, 2500000, '<div class=\"hJVAU\" data-test-target=\"list-card-address\"><span class=\"biGQs _P fiohW hmDzD\">Kampung Kurkapa - Pulau Mansuar, Papua Barat 80034 Indonesia</span></div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>21.7 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>');
+(27, 'PB', 'Katembe Private Island', 4, 4000000, '<div class=\"hJVAU\" data-test-target=\"list-card-address\"><span class=\"biGQs _P fiohW hmDzD\">Waisai, Papua Barat 98482 Indonesia</span></div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>7.5 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Paling Hemat No.&nbsp;1&nbsp;dari&nbsp;3&nbsp;di&nbsp;Hotel Dekat Raja Ampat Dive Resort</span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\">&nbsp;</div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Note: harga diatas merupakan per malam</span></div>'),
+(28, 'PB', 'Korpak Villa & Resort Waisay Raja Ampat', 5, 1600000, '<div class=\"vhaQX scTWu\">\r\n<div class=\"DgJpu\">\r\n<div class=\"luFhX o W f u w JSdbl\">\r\n<div class=\"hgCGO\">Jl. Poros Waiwo, Waisai, Papua Barat 98482 Indonesia</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>4.1 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Paling Hemat No.&nbsp;2&nbsp;dari&nbsp;3&nbsp;di&nbsp;Hotel Dekat Raja Ampat Dive Resort</span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\">&nbsp;</div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Note: harga diatas merupakan per malam</span></div>'),
+(29, 'PB', 'Kayafyof Homestay', 5, 750000, '<div class=\"hJVAU\" data-test-target=\"list-card-address\"><span class=\"biGQs _P fiohW hmDzD\">Kampung Arborek, Besir, Papua Barat 98482 Indonesia</span></div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>28.0 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Paling Hemat No.&nbsp;3&nbsp;dari&nbsp;3&nbsp;di&nbsp;Hotel Dekat Raja Ampat Dive Resort</span></div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\">&nbsp;</div>\r\n<div class=\"uiCLo H4\" data-test-target=\"hotels-popularity-index\"><span class=\"biGQs _P pZUbB hmDzD\">Note: harga diatas merupakan per malam</span></div>'),
+(30, 'PB', 'Raja Ampat Dive Lodge', 4, 2500000, '<div class=\"hJVAU\" data-test-target=\"list-card-address\"><span class=\"biGQs _P fiohW hmDzD\">Kampung Kurkapa - Pulau Mansuar, Papua Barat 80034 Indonesia</span></div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\"><strong>21.7 km</strong>&nbsp;dari Raja Ampat Dive Resort</span></span></div>\r\n<div class=\"hJVAU\">&nbsp;</div>\r\n<div class=\"hJVAU\"><span class=\"_W Q1 Hn\"><span class=\"biGQs _P fiohW hmDzD\">Note: harga diatas merupakan per malam</span></span></div>'),
+(31, 'JP', 'Horison Ultima Entrop Papua', 4, 800000, '<p>Horison Ultima Entrop adalah Hotel bintang 4 yang menawarkan kenyamanan terbaik bagi pelancong bisnis dan rekreasi. Terletak di pusat kota Jayapura dengan akses mudah ke berbagai tempat wisata. Nikmati matahari terbenam tropis yang indah di danau Sentani.</p>\r\n<p>&nbsp;</p>\r\n<p>Note: Harga diatas merupakan per malam</p>'),
+(32, 'JP', 'Horison Kotaraja', 3, 500000, '<div class=\"SeoCardDesktopContent_content_container__RsQPm\" data-testid=\"seo-card-desktop\">\r\n<div class=\"SeoCardDesktopContent_second_row__HoQ4x\"><span class=\"SeoCardDesktopContent_hide_description__yrqhy Text_text__DSnue Text_variant_lowEmphasis__VihAq Text_size_sm__7KYH5 Text_weight_semibold__sqJ1m\">Horison Kotaraja menawarkan akomodasi berbintang 3 di kota Jayapura. Hotel ini berlokasi strategis, hanya 1,2 km dari Ramayana Mall Abepura. Selain kolam renang, tersedia spa dan restoran. Akses WiFi gratis juga tersedia di seluruh area hotel. Kamar-kamar ber-AC di Horison Kotaraja tertara rapi.</span></div>\r\n<div class=\"SeoCardDesktopContent_second_row__HoQ4x\">&nbsp;</div>\r\n<div class=\"SeoCardDesktopContent_second_row__HoQ4x\"><span class=\"SeoCardDesktopContent_hide_description__yrqhy Text_text__DSnue Text_variant_lowEmphasis__VihAq Text_size_sm__7KYH5 Text_weight_semibold__sqJ1m\">Note: harga merupakan per malam</span></div>\r\n</div>\r\n<p>&nbsp;</p>'),
+(33, 'JP', 'Tidak Menginap', 5, 0, '<p>Tidak Menginap</p>'),
+(34, 'JP', 'Grand Abe Hotel', 4, 560000, '<div class=\"SeoCardDesktopContent_content_container__RsQPm\" data-testid=\"seo-card-desktop\">\r\n<div class=\"SeoCardDesktopContent_second_row__HoQ4x\"><span class=\"SeoCardDesktopContent_hide_description__yrqhy Text_text__DSnue Text_variant_lowEmphasis__VihAq Text_size_sm__7KYH5 Text_weight_semibold__sqJ1m\">Dengan lokasi yang strategis di Jalan Abepura, kamu dapat menuju Grand Abe Hotel dengan 11 menit berkendara dari Dermaga Teluk Youtefa. Hotel bintang 3 ini menyediakan 11 ruang rapat untuk keperluan acara formal serta ballroom yang dapat digunakan untuk merayakan pesta.&nbsp;</span></div>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Note: harga diatas merupakan harga per malam</p>');
 
 -- --------------------------------------------------------
 
@@ -319,8 +324,8 @@ CREATE TABLE `tbl_kategori` (
 
 INSERT INTO `tbl_kategori` (`id_kategori`, `kategori`, `keterangan`) VALUES
 (1, 'Paket Perorangan (1 Org)', 'Paket Travel ini dikususkan untuk wisatawan yang ingin berlibur sendiri saja. Namun nanti dalam Tour, Touris akan diserentakkan keberangkatannya dalam satu mobil. Dalam satu mobil tersebut maksimal hanya 4 Touris, disertakan dengan Driver dan Pemandu wisata. '),
-(2, 'Paket Grup/kelompok (3-5 Org)', 'kedua kalinya'),
-(3, 'Paket Keluarga (5 Org)', 'ketiga kalinya'),
+(2, 'Paket Grup/kelompok (5 Org)', 'kedua kalinya'),
+(3, 'Paket Keluarga (3-5 Org)', 'ketiga kalinya'),
 (4, 'Paket Couple (2 Org)', 'Paket untuk pasanngan'),
 (5, 'Paket Couple Dating (4 Org)', 'Sangat cocok untuk kamu dan besti kamu liburan');
 
@@ -347,7 +352,12 @@ INSERT INTO `tbl_paket` (`id_paket`, `id_kategori`, `nama_paket`, `harga_paket`,
 (7, 2, 'Raja Ampat', 6000000, 'Paket ini menjadi pilihan tepat bagi kamu yang ingin berlibur ke Raja Ampat dengan fasilitas lengkap namun tetap dengan biaya terjangkau. Saat ini anda bisa pilih salah satu dari 3 pilihan speedboat yang kami sediakan sesuai dengan kebutuhan anda. Antara lain, Speedboat King Trans, King Four I, King Four III, dan lain - lain.'),
 (8, 3, 'Raja Ampat', 8000000, 'Paket ini menjadi pilihan tepat bagi kamu yang ingin berlibur ke Raja Ampat dengan fasilitas lengkap namun tetap dengan biaya terjangkau. Saat ini anda bisa pilih salah satu dari 3 pilihan speedboat yang kami sediakan sesuai dengan kebutuhan anda. Antara lain, Speedboat King Trans, King Four I, King Four III, dan lain - lain.'),
 (9, 4, 'Raja Ampat', 4000000, 'Paket ini menjadi pilihan tepat bagi kamu yang ingin berlibur ke Raja Ampat dengan fasilitas lengkap namun tetap dengan biaya terjangkau. Saat ini anda bisa pilih salah satu dari 3 pilihan speedboat yang kami sediakan sesuai dengan kebutuhan anda. Antara lain, Speedboat King Trans, King Four I, King Four III, dan lain - lain.'),
-(10, 5, 'Raja Ampat', 7500000, 'Paket ini menjadi pilihan tepat bagi kamu yang ingin berlibur ke Raja Ampat dengan fasilitas lengkap namun tetap dengan biaya terjangkau. Saat ini anda bisa pilih salah satu dari 3 pilihan speedboat yang kami sediakan sesuai dengan kebutuhan anda. Antara lain, Speedboat King Trans, King Four I, King Four III, dan lain - lain.');
+(10, 5, 'Raja Ampat', 7500000, 'Paket ini menjadi pilihan tepat bagi kamu yang ingin berlibur ke Raja Ampat dengan fasilitas lengkap namun tetap dengan biaya terjangkau. Saat ini anda bisa pilih salah satu dari 3 pilihan speedboat yang kami sediakan sesuai dengan kebutuhan anda. Antara lain, Speedboat King Trans, King Four I, King Four III, dan lain - lain.'),
+(11, 1, 'Danau Sentani', 10000, 'Danau Sentani terletak di Kecamatan Sentani, Papua. Danau ini juga terletak di bawah lereng Pegunungan Cagar Alam Cyclops. Adapun cara untuk berwisata ke Danau Sentani khususnya untuk wisatawan dari luar provinsi Papua, bisa menggunakan ojek. Bisa juga menyewa kendaraan baik motor atau mobil dari Bandara.'),
+(12, 2, 'Danau Sentani', 50000, 'Danau Sentani terletak di Kecamatan Sentani, Papua. Danau ini juga terletak di bawah lereng Pegunungan Cagar Alam Cyclops. Adapun cara untuk berwisata ke Danau Sentani khususnya untuk wisatawan dari luar provinsi Papua, bisa menggunakan ojek. Bisa juga menyewa kendaraan baik motor atau mobil dari Bandara.'),
+(13, 3, 'Danau Sentani', 35000, 'Danau Sentani terletak di Kecamatan Sentani, Papua. Danau ini juga terletak di bawah lereng Pegunungan Cagar Alam Cyclops. Adapun cara untuk berwisata ke Danau Sentani khususnya untuk wisatawan dari luar provinsi Papua, bisa menggunakan ojek. Bisa juga menyewa kendaraan baik motor atau mobil dari Bandara.'),
+(14, 4, 'Danau Sentani', 20000, 'Danau Sentani terletak di Kecamatan Sentani, Papua. Danau ini juga terletak di bawah lereng Pegunungan Cagar Alam Cyclops. Adapun cara untuk berwisata ke Danau Sentani khususnya untuk wisatawan dari luar provinsi Papua, bisa menggunakan ojek. Bisa juga menyewa kendaraan baik motor atau mobil dari Bandara.'),
+(15, 5, 'Danau Sentani', 40000, 'Danau Sentani terletak di Kecamatan Sentani, Papua. Danau ini juga terletak di bawah lereng Pegunungan Cagar Alam Cyclops. Adapun cara untuk berwisata ke Danau Sentani khususnya untuk wisatawan dari luar provinsi Papua, bisa menggunakan ojek. Bisa juga menyewa kendaraan baik motor atau mobil dari Bandara.');
 
 -- --------------------------------------------------------
 
@@ -373,8 +383,9 @@ INSERT INTO `tbl_pesan` (`id_pesan`, `id_user`, `id_paket`, `id_hotel`, `tgl_pes
 (7, 3, 2, 1, '2024-08-01', '2024-08-17', 'S2'),
 (8, 3, 1, 25, '2024-08-01', '2024-08-31', 'S4'),
 (9, 16, 1, 24, '2024-08-02', '2024-08-30', 'S4'),
-(10, 15, 1, 26, '2024-08-02', '2026-08-17', 'S3'),
-(11, 15, 7, 27, '2024-08-02', '2028-08-12', 'S3');
+(10, 15, 1, 26, '2024-08-02', '2026-08-17', 'S4'),
+(11, 15, 7, 27, '2024-08-02', '2028-08-12', 'S3'),
+(14, 17, 1, 32, '2024-08-07', '2029-08-17', 'S1');
 
 -- --------------------------------------------------------
 
@@ -408,7 +419,8 @@ INSERT INTO `tbl_user` (`id_user`, `nama_user`, `email_user`, `tipe_id`, `no_id`
 (3, 'Budi Santoso', 'budi.santoso@example.com', 'KTP', '23456789012', '082345678901', '23456789', 'Budi Santoso', 'budi', 'budi123', '', 'L', 'Jl. Mawar No. 45, Bandung'),
 (4, 'Dewi Lestari', 'dewi.lestari@example.com', 'KTP', '34567890123', '083456789012', '34567890', 'Dewi Lestari', 'dewi', 'dewi123', '', 'P', 'Jl. Anggrek No. 78, Surabaya'),
 (5, 'Andi Pratama', 'andi.pratama@example.com', 'KTP', '45678901234', '084567890123', '45678901', 'Andi Pratama', 'andi', 'andi123', '', 'L', 'Jl. Kenanga No. 90, Yogyakarta'),
-(15, 'Xead', 'jonathan.natannael@student.iti.ac.id', 'Pasport', '08237283468734', '083807914090', '90234123', 'Xeadesta Erla', 'xead', '123', '10 Feb 2000', 'L', '<p>Bogor</p>');
+(15, 'Xead', 'jonathan.natannael@student.iti.ac.id', 'Pasport', '08237283468734', '083807914090', '90234123', 'Xeadesta Erla', 'xead', '123', '10 Feb 2000', 'L', '<p>Bogor</p>'),
+(17, 'Nahida', 'jonathan.natannael@student.iti.ac.id', 'KTP', '093859335', '083807914090', '90234123', 'Nahida Kusanali', 'nahida', '123', '08 Jan 2020', 'P', '<p>Bogor</p>');
 
 --
 -- Indexes for dumped tables
@@ -514,7 +526,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT untuk tabel `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id_komentar` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_komentar` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `setup_about`
@@ -544,19 +556,19 @@ ALTER TABLE `setup_sumbar`
 -- AUTO_INCREMENT untuk tabel `tbl_bukti`
 --
 ALTER TABLE `tbl_bukti`
-  MODIFY `id_bukti` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_bukti` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_daerah`
 --
 ALTER TABLE `tbl_daerah`
-  MODIFY `id_daerah` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_daerah` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_hotel`
 --
 ALTER TABLE `tbl_hotel`
-  MODIFY `id_hotel` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_hotel` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_kategori`
@@ -568,19 +580,19 @@ ALTER TABLE `tbl_kategori`
 -- AUTO_INCREMENT untuk tabel `tbl_paket`
 --
 ALTER TABLE `tbl_paket`
-  MODIFY `id_paket` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_paket` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pesan`
 --
 ALTER TABLE `tbl_pesan`
-  MODIFY `id_pesan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_pesan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
