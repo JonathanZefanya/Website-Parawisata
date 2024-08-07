@@ -10,7 +10,7 @@ Terima kasih :) :) 					|
 ========================================================|
 ::::::::::************** CREDIT *************:::::::::::|
 JONATHAN NATHANNAEL ZEFANYA				|
-https://github.com/anastasiadpp				|			
+https://github.com/jonathanzefanya				|			
 ========================================================|
 							|
 ===========---//INSTALASI SOURCE CODE\\---==============|

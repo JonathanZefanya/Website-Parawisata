@@ -20,13 +20,13 @@
 				<li>
 					<a class="dropdown-toggle" href="#"> Tentang Papua </a>
 					<ul class="dropdown-menu" data-role="dropdown">
-						<li><a href="sumbar.php?post=profil">Profil</a></li>
-						<li><a href="sumbar.php?post=sejarah">Sejarah</a></li>
+						<li><a href="info.php?post=profil">Profil</a></li>
+						<li><a href="info.php?post=sejarah">Sejarah</a></li>
 						<li><a href="galeri.php">Galeri</a></li>
 						<li class="divider"></li>
-						<li><a href="sumbar.php?post=wisata">Objek Wisata</a></li>
-						<li><a href="sumbar.php?post=kuliner">Varian Kuliner</a></li>
-						<li><a href="sumbar.php?post=budaya">Budaya</a></li>
+						<li><a href="info.php?post=wisata">Objek Wisata</a></li>
+						<li><a href="info.php?post=kuliner">Varian Kuliner</a></li>
+						<li><a href="info.php?post=budaya">Budaya</a></li>
 					</ul>
 				</li>
 				

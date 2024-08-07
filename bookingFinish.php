@@ -54,7 +54,7 @@ if(isset($_SESSION['username'])){
 				Institut Teknologi Indonesia<br />
 				Gedung D Nomor 7<br />
 				Tangerang Selatan, Jawa Barat</p>
-				<p class="tertiary-text-secondary">anastasiadpp@gmail.com<br />
+				<p class="tertiary-text-secondary">jonathan.zefanya16@gmail.com<br />
 				081296703788</p>
 				<p class="tertiary-text-secondary">BNI : 0350520214 a/n JONATHAN NATHANNAEL ZEFANYA<br />
 				Mandiri : 1710000395346 a/n JONATHAN NATHANNAEL ZEFANYA</p>
