@@ -1,4 +1,6 @@
 # WELCOMETO WISATHAN
+1. Nama: Jonathan Natannael Zefanya
+2. No REGIST: 19383091140-24
 
 ========================================================
 

@@ -105,6 +105,19 @@ if(isset($_SESSION['username'])){
                     </tbody>
                     
                 </table>
+
+				<div class="notice bg-red fg-white" style="margin-top:10px;">
+					<h2>Perhatian</h2>
+					<p>Untuk membatalkan booking, silahkan hubungi operator kami.</p>
+					<p>Dengan format 
+						<ul>
+							<li>Subjek: Pembatalan Booking</li>
+							<li>Isi: (ID Pesan), (Alasan Pembatalan)</li>
+							<li>Kirim ke: <a href="mailto:jonathan.zefanya16@gmail.com">Email Kami / Klik Disini</a>
+						</ul>
+					</p>
+					<p>Terima kasih.</p>
+				</div>
 		</div>
     </div>
     <!-- ---------------------------------------- ISI TAB ------------------------------------- -->
