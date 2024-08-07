@@ -1,10 +1,9 @@
-BLOGBUGABAGI						|
+<h1>WELCOMETO WISATHAN</h1>					|
+========================================================|			|
+IG	: instagram.com/xeadesta			|
+FB	: facebook.com/p.memehandal87			|
 ========================================================|
-https://blogbugabagi.blogspot.com			|
-IG	: instagram.com/blogbugabagi			|
-FB	: facebook.com/bugabagiblog			|
-========================================================|
-PASSWORD : blogbugabagi.blogspot.com			|
+lets play		|
 ========================================================|
 Terima kasih :) :) 					|
 ========================================================|
