@@ -17,8 +17,8 @@ https://github.com/jonathanzefanya				|
 -Ekstrak source code					|
 -Jika menggunakan xampp simpan folder WISATHAN		|
  ke dalam folder htdocs					|
--Buat database baru dengan nama db_ninatour		|
--import file db_ninatour.sql yang ada di folder db 	|
+-Buat database baru dengan nama wisata		|
+-import file wisata.sql yang ada di folder db 	|
  ke dalam database yang dibuat tadi			|
 -Buka browser lalu jalankan dengan menuliskan 		|
  localhost/WISATHAN					|
